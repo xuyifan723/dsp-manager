@@ -19,18 +19,7 @@ import java.util.List;
 @MapperScan("com.xuyifan.dspmanager.dao")
 @ComponentScan(basePackages = {"com.xuyifan.dspmanager.*"})
 public class DspManagerApplication {
-    @Bean
-    public HttpMessageConverters fastJsonHttpMessageConventers(){
-        FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
-        FastJsonConfig config = new FastJsonConfig();
-        List<MediaType> mediaTypes = new ArrayList<>();
-        mediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
-        config.setSerializerFeatures(SerializerFeature.PrettyFormat);
-        converter.setSupportedMediaTypes(mediaTypes);
-        converter.setFastJsonConfig(config);
-        HttpMessageConverter<?> converter1 = converter;
-        return new HttpMessageConverters(converter1);
-    }
+
     public static void main(String[] args) {
         SpringApplication.run(DspManagerApplication.class, args);
 
