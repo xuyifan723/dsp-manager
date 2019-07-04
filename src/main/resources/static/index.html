@@ -1,106 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>王子系统</title>
-    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/layui.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="icon" href="/favicon.ico">
+    <title>管理后台</title>
 </head>
 <body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <div class="layui-logo">数据调度系统</div>
-    <!--    &lt;!&ndash; 头部区域（可配合layui已有的水平导航） &ndash;&gt;
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">商品管理</a></li>
-            <li class="layui-nav-item"><a href="">用户</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
-                </dl>
-            </li>
-        </ul>-->
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    大师兄
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">退出</a></li>
-        </ul>
-    </div>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header custom-header">
+            
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item slide-sidebar" lay-unselect>
+                    <a href="javascript:;" class="icon-font"><i class="ai ai-menufold"></i></a>
+                </li>
+            </ul>
 
-    <div class="layui-side layui-bg-black" id ="menu">
-        <div class="layui-side-scroll">
-            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">所有商品</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="form.html">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="javascript:;">列表三</a></dd>
-                        <dd><a href="">超链接</a></dd>
-                    </dl>
-                </li>
+            <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
+                    <a href="javascript:;">BieJun</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="">超链接</a></dd>
+                        <dd><a href="">帮助中心</a></dd>
+                        <dd><a href="login.html">退出</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">发布商品</a></li>
             </ul>
         </div>
-    </div>
 
-    <div class="layui-body">
-        <div class="layui-tab" lay-allowClose="true" style="margin-top: 0px;height: 100%">
-            <ul class="layui-tab-title">
-                <li class="layui-this">网站设置</li>
-                <li>用户基本管理</li>
-                <li>权限分配</li>
-                <li>全部历史商品管理文字长一点试试</li>
-                <li>订单管理</li>
-            </ul>
-            <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">1</div>
-                <div class="layui-tab-item">2</div>
-                <div class="layui-tab-item">3</div>
-                <div class="layui-tab-item">4</div>
-                <div class="layui-tab-item">5</div>
-                <div class="layui-tab-item">6</div>
+        <div class="layui-side custom-admin">
+            <div class="layui-side-scroll">
+
+                <div class="custom-logo">
+                    <img src="assets/images/logo.png" alt=""/>
+                    <h1>Admin Pro</h1>
+                </div>
+                <ul id="Nav" class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe609;</i>
+                            <em>主页</em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="views/console.html">控制台</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe857;</i>
+                            <em>组件</em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="views/form.html">表单</a></dd>
+                            <dd>
+                                <a href="javascript:;">页面</a>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="login.html">登录页</a>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe612;</i>
+                            <em>用户</em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="views/users.html">用户组</a></dd>
+                            <dd><a href="views/operaterule.html">权限配置</a></dd>
+                        </dl>
+                    </li>
+
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe612;</i>
+                            <em>菜单管理</em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="views/menu/menuList.html">菜单添加</a></dd>
+                            <dd><a href="views/operaterule.html">查询菜单</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+
             </div>
         </div>
-    </div>
 
-    <div class="layui-footer">
-        <!-- 底部固定区域 -->
-        © 王子系统  请各位同僚谨慎操作
-    </div>
-</div>
-<script src="./lib/layui/layui.js"></script>
-<script src="./lib/vue/vue.min.js"></script>
-<script src="./lib/vue/vue-resource.min.js"></script>
-<script src="./data/vuedatajs/Form.js"></script>
-<script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-        var element = layui.element;
+        <div class="layui-body">
+             <div class="layui-tab app-container" lay-allowClose="true" lay-filter="tabs">
+                <ul id="appTabs" class="layui-tab-title custom-tab"></ul>
+                <div id="appTabPage" class="layui-tab-content"></div>
+            </div>
+        </div>
 
-    });
-</script>
+        <div class="layui-footer">
+            <p>© 2018 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+        </div>
+
+        <div class="mobile-mask"></div>
+    </div>
+    <script src="assets/layui.js"></script>
+    <script src="index.js" data-main="home"></script>
 </body>
 </html>
