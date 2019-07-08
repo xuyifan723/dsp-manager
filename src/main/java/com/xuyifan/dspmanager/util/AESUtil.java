@@ -28,6 +28,10 @@ public class AESUtil {
         return doAES(data, key, Cipher.ENCRYPT_MODE);
     }
 
+    public static String encrypt(String data) {
+        return doAES(data, KEY, Cipher.ENCRYPT_MODE);
+    }
+
     /**
      * 解密
      *
@@ -37,6 +41,10 @@ public class AESUtil {
      */
     public static String decrypt(String data, String key) {
         return doAES(data, key, Cipher.DECRYPT_MODE);
+    }
+
+    public static String decrypt(String data) {
+        return doAES(data, KEY, Cipher.DECRYPT_MODE);
     }
 
     /**
