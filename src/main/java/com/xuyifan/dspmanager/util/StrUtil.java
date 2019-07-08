@@ -17,19 +17,19 @@ public class StrUtil {
     public static String getMsg(String regex,Object... msg){
         StringBuilder str=new StringBuilder();
         int index=1;
-        String msginfo=(String) msg[0];
+        String msginfo=" "+(String) msg[0]+" ";
         String[] strArray=null;
         if (StringUtils.isNotEmpty(msginfo)){
             strArray = msginfo.split(regex);
         }
         for (String msgStr : strArray) {
            str.append(msgStr);
-           if (msg.length<=index){
+           if (msg.length-1>index){
                str.append(msg[index]);
            }
             index++;
         }
-
-        return str.toString();
+        String result=str.toString().replaceFirst(" ","");
+        return result.substring(0,result.length()-1);
     }
 }
