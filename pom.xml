@@ -99,6 +99,11 @@
             <artifactId>mybatis-generator-core</artifactId>
             <version>1.3.6</version>
         </dependency>
+        <!--set get-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
     </dependencies>
 

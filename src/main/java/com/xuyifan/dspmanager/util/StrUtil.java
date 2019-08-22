@@ -9,11 +9,13 @@ import org.apache.commons.lang.StringUtils;
  * @Created by XUYIFAN723
  */
 public class StrUtil {
-    /**
-     *替换字符串，将字符串中的固定字符的替换
-     * @param msg
-     * @return
-     */
+   /**
+    * 功能描述:替换字符串，将字符串中的固定字符的替换
+    * @Param: [regex 匹配正则, msg 第一个是msg,后面就是替换的str]
+    * @Return: java.lang.String
+    * @Author: Xu yifan
+    * @Date: 2019/8/22 9:38
+    */
     public static String getMsg(String regex,Object... msg){
         StringBuilder str=new StringBuilder();
         int index=1;
@@ -22,6 +24,7 @@ public class StrUtil {
         if (StringUtils.isNotEmpty(msginfo)){
             strArray = msginfo.split(regex);
         }
+
         for (String msgStr : strArray) {
            str.append(msgStr);
            if (msg.length-1>index){

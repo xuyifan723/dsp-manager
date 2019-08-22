@@ -51,7 +51,7 @@ public class CookieUtil {
         String userValue = getCookie(USER_COOKIE_NAME, request);
         String userName = "";
         if (!StringUtils.isEmpty(userValue)) {
-            String[] userInfo = userValue.split("__");
+            String[] userInfo = userValue.split("_");
             userName = userInfo[0];
             Long loginTime = Long.valueOf(userInfo[1]);
             boolean flag = System.currentTimeMillis() - EXPIRE_TIME > loginTime;

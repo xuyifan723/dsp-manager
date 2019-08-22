@@ -1,6 +1,8 @@
 package com.xuyifan.dspmanager.util;
 
 
+import com.xuyifan.dspmanager.exception.DspException;
+import com.xuyifan.dspmanager.exception.MsgException;
 import org.apache.commons.lang.StringUtils;
 
 import javax.crypto.Cipher;
@@ -16,7 +18,7 @@ import java.security.SecureRandom;
 public class AESUtil {
     private static final String defaultCharset = "UTF-8";
     private static final String KEY_AES = "AES";
-    private static final String KEY = "xuyifann";
+    private static final String KEY = "xyfsyy_love";//xuyifann
     /**
      * 加密
      *
@@ -92,8 +94,8 @@ public class AESUtil {
                 return new String(result, defaultCharset);
             }
         } catch (Exception e) {
+            throw new MsgException("AES加解密失败");
         }
-        return null;
     }
     /**
      * 将二进制转换成16进制
