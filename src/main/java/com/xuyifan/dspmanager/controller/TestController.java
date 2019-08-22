@@ -1,20 +1,11 @@
 package com.xuyifan.dspmanager.controller;
 
-import com.xuyifan.dspmanager.bean.User;
-import com.xuyifan.dspmanager.service.UserService;
-import com.xuyifan.dspmanager.util.ReadExcel;
-import com.xuyifan.dspmanager.viewbean.ResultBean;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.List;
+
 
 @RestController
 public class TestController {
