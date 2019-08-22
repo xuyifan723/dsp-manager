@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /data-manager
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/data_manager
+    username: root
+    password: 111111
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.xuyifan.dspmanager.bean
+
+code:
+  generator-author: tanglijun
+  generator-output-path: /src/main/java
+  generator-package-name: com.sunducation.wts.wisdom.training
+  generator-mapper-xml-path: /src/main/resources/mapper/
