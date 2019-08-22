@@ -1,7 +1,6 @@
 package com.xuyifan.dspmanager.enumbean;
 
 import lombok.Getter;
-import lombok.Setter;
 
 
 @Getter

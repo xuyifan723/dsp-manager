@@ -37,7 +37,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
         String token = request.getHeader(TokenUtils.TOKEN_NAME);
         if (StringUtils.isEmpty(token)) {
-            throw  new UserException("没有登陆");
+            throw  new UserException("用户没有登陆");
         }
         request.setAttribute("currentUser", token);
       return true;
